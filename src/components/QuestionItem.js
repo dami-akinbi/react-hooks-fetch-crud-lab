@@ -11,7 +11,7 @@ function QuestionItem({ question, onDeleteItem }) {
 
   function handleDeleteClick() {
     fetch(`http://localhost:4000/questions/${id}`, {
-      // method: "DELETE",
+      method: "DELETE",
     })
       .then((r) => r.json())
       .then(() => onDeleteItem(question));
